@@ -189,7 +189,7 @@ function QtLoader(config)
             removeChildren(container);
             var loadingText = document.createElement("text");
             loadingText.className = "QtLoading"
-            loadingText.innerHTML = '<p><center> Setting up target dummies...</center><p>';
+            loadingText.innerHTML = '<p><center> ${loadingState}...</center><p>';
             return loadingText;
         };
 
@@ -274,7 +274,7 @@ function QtLoader(config)
     function fetchCompileWasm(filePath) {
         return fetchResource(filePath).then(function(response) {
             if (typeof WebAssembly.compileStreaming !== "undefined") {
-                self.loaderSubState = "Downloading/Compiling";
+                self.loaderSubState = "Loading target dummies..";
                 setStatus("Loading");
                 return WebAssembly.compileStreaming(response).catch(function(error) {
                     // compileStreaming may/will fail if the server does not set the correct
