@@ -883,7 +883,7 @@ public:
         iterations_stats = new QSpinBox(groupBox_4);
         iterations_stats->setObjectName(QString::fromUtf8("iterations_stats"));
         iterations_stats->setGeometry(QRect(128, 85, 51, 22));
-        iterations_stats->setMinimum(1000);
+        iterations_stats->setMinimum(10);
         iterations_stats->setMaximum(10000);
         iterations_stats->setSingleStep(100);
         iterations_stats->setValue(1000);
@@ -935,7 +935,7 @@ public:
         label_40->setFont(font);
         label_current_progress = new QLabel(groupBox_24);
         label_current_progress->setObjectName(QString::fromUtf8("label_current_progress"));
-        label_current_progress->setGeometry(QRect(12, 47, 411, 16));
+        label_current_progress->setGeometry(QRect(12, 47, 671, 16));
         label_current_progress->setFont(font);
         groupBox_26 = new QGroupBox(groupBox_24);
         groupBox_26->setObjectName(QString::fromUtf8("groupBox_26"));
@@ -1347,7 +1347,10 @@ public:
         textBrowser_name = new QTextBrowser(scrollAreaWidgetContents_2);
         textBrowser_name->setObjectName(QString::fromUtf8("textBrowser_name"));
         textBrowser_name->setGeometry(QRect(0, 0, 191, 12001));
-        textBrowser_name->setFont(font3);
+        QFont font4;
+        font4.setFamily(QString::fromUtf8("OpenSymbol"));
+        font4.setPointSize(7);
+        textBrowser_name->setFont(font4);
         textBrowser_name->setFrameShape(QFrame::NoFrame);
         textBrowser_name->setLineWidth(0);
         textBrowser_name->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
@@ -1356,7 +1359,7 @@ public:
         textBrowser_weight = new QTextBrowser(scrollAreaWidgetContents_2);
         textBrowser_weight->setObjectName(QString::fromUtf8("textBrowser_weight"));
         textBrowser_weight->setGeometry(QRect(190, 0, 41, 12001));
-        textBrowser_weight->setFont(font3);
+        textBrowser_weight->setFont(font4);
         textBrowser_weight->setFrameShape(QFrame::NoFrame);
         textBrowser_weight->setLineWidth(0);
         textBrowser_weight->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
@@ -1365,7 +1368,7 @@ public:
         textBrowser_weightdiff = new QTextBrowser(scrollAreaWidgetContents_2);
         textBrowser_weightdiff->setObjectName(QString::fromUtf8("textBrowser_weightdiff"));
         textBrowser_weightdiff->setGeometry(QRect(230, 0, 51, 12001));
-        textBrowser_weightdiff->setFont(font3);
+        textBrowser_weightdiff->setFont(font4);
         textBrowser_weightdiff->setFrameShape(QFrame::NoFrame);
         textBrowser_weightdiff->setLineWidth(0);
         textBrowser_weightdiff->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
@@ -1374,7 +1377,7 @@ public:
         textBrowser_source = new QTextBrowser(scrollAreaWidgetContents_2);
         textBrowser_source->setObjectName(QString::fromUtf8("textBrowser_source"));
         textBrowser_source->setGeometry(QRect(280, 0, 161, 12001));
-        textBrowser_source->setFont(font3);
+        textBrowser_source->setFont(font4);
         textBrowser_source->setFrameShape(QFrame::NoFrame);
         textBrowser_source->setLineWidth(0);
         textBrowser_source->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
@@ -1383,7 +1386,7 @@ public:
         textBrowser_source_2 = new QTextBrowser(scrollAreaWidgetContents_2);
         textBrowser_source_2->setObjectName(QString::fromUtf8("textBrowser_source_2"));
         textBrowser_source_2->setGeometry(QRect(440, 0, 211, 12001));
-        textBrowser_source_2->setFont(font3);
+        textBrowser_source_2->setFont(font4);
         textBrowser_source_2->setFrameShape(QFrame::NoFrame);
         textBrowser_source_2->setLineWidth(0);
         textBrowser_source_2->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
@@ -1789,11 +1792,11 @@ public:
         comboBox_itemselection_head_gem_second = new QComboBox(groupBox_20);
         comboBox_itemselection_head_gem_second->setObjectName(QString::fromUtf8("comboBox_itemselection_head_gem_second"));
         comboBox_itemselection_head_gem_second->setGeometry(QRect(180, 50, 121, 21));
-        QFont font4;
-        font4.setPointSize(7);
-        font4.setBold(false);
-        font4.setWeight(50);
-        comboBox_itemselection_head_gem_second->setFont(font4);
+        QFont font5;
+        font5.setPointSize(7);
+        font5.setBold(false);
+        font5.setWeight(50);
+        comboBox_itemselection_head_gem_second->setFont(font5);
         comboBox_itemselection_head_gem_second->setAutoFillBackground(false);
         comboBox_itemselection_head_gem_third = new QComboBox(groupBox_20);
         comboBox_itemselection_head_gem_third->setObjectName(QString::fromUtf8("comboBox_itemselection_head_gem_third"));
@@ -2782,18 +2785,18 @@ public:
         palette3.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush3);
 #endif
         label_talents_status->setPalette(palette3);
-        QFont font5;
-        font5.setPointSize(20);
-        label_talents_status->setFont(font5);
+        QFont font6;
+        font6.setPointSize(20);
+        label_talents_status->setFont(font6);
         label_talents_status->setScaledContents(false);
         label_talents_status->setAlignment(Qt::AlignCenter);
         pushButton_talents_reset = new QPushButton(widget);
         pushButton_talents_reset->setObjectName(QString::fromUtf8("pushButton_talents_reset"));
         pushButton_talents_reset->setEnabled(true);
         pushButton_talents_reset->setGeometry(QRect(720, 610, 101, 31));
-        QFont font6;
-        font6.setPointSize(12);
-        pushButton_talents_reset->setFont(font6);
+        QFont font7;
+        font7.setPointSize(12);
+        pushButton_talents_reset->setFont(font7);
         pushButton_talents_reset->setLayoutDirection(Qt::RightToLeft);
         pushButton_talents_reset->setAutoFillBackground(false);
         pushButton_talents_reset->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 0);\n"
@@ -3261,6 +3264,10 @@ public:
         label_16 = new QLabel(groupBox_22);
         label_16->setObjectName(QString::fromUtf8("label_16"));
         label_16->setGeometry(QRect(370, 20, 91, 21));
+        QFont font8;
+        font8.setFamily(QString::fromUtf8("Ubuntu"));
+        font8.setPointSize(9);
+        label_16->setFont(font8);
         mh_lower_value = new QLabel(groupBox_22);
         mh_lower_value->setObjectName(QString::fromUtf8("mh_lower_value"));
         mh_lower_value->setGeometry(QRect(240, 20, 47, 21));
@@ -3345,9 +3352,9 @@ public:
         pushButton = new QPushButton(groupBox_22);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
         pushButton->setGeometry(QRect(680, 60, 181, 51));
-        QFont font7;
-        font7.setPointSize(15);
-        pushButton->setFont(font7);
+        QFont font9;
+        font9.setPointSize(15);
+        pushButton->setFont(font9);
         checkBox_simulate_stat_weights = new QCheckBox(groupBox_22);
         checkBox_simulate_stat_weights->setObjectName(QString::fromUtf8("checkBox_simulate_stat_weights"));
         checkBox_simulate_stat_weights->setGeometry(QRect(700, 40, 151, 20));
@@ -3359,7 +3366,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(2);
+        tabWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
