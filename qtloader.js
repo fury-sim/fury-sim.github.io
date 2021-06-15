@@ -265,7 +265,7 @@ function QtLoader(config)
 
     function fetchThenCompileWasm(response) {
         return response.arrayBuffer().then(function(data) {
-            self.loaderSubState = "Setting up target dummies..";
+            self.loaderSubState = "Compiling";
             setStatus("Loading") // trigger loaderSubState udpate
             return WebAssembly.compile(data);
         });
@@ -274,7 +274,7 @@ function QtLoader(config)
     function fetchCompileWasm(filePath) {
         return fetchResource(filePath).then(function(response) {
             if (typeof WebAssembly.compileStreaming !== "undefined") {
-                self.loaderSubState = "Setting up target dummies..";
+                self.loaderSubState = "Downloading/Compiling";
                 setStatus("Loading");
                 return WebAssembly.compileStreaming(response).catch(function(error) {
                     // compileStreaming may/will fail if the server does not set the correct

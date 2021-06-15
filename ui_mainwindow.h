@@ -608,6 +608,8 @@ public:
     QLabel *meta_gem_isactive;
     QPushButton *pushButton;
     QCheckBox *checkBox_simulate_stat_weights;
+    QPushButton *pushButton_save;
+    QPushButton *pushButton_load;
     QMenuBar *menubar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -616,7 +618,7 @@ public:
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
         MainWindow->resize(900, 860);
         MainWindow->setMinimumSize(QSize(900, 860));
-        MainWindow->setMaximumSize(QSize(900, 901));
+        MainWindow->setMaximumSize(QSize(900, 902));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         centralwidget->setMinimumSize(QSize(900, 880));
@@ -883,7 +885,7 @@ public:
         iterations_stats = new QSpinBox(groupBox_4);
         iterations_stats->setObjectName(QString::fromUtf8("iterations_stats"));
         iterations_stats->setGeometry(QRect(128, 85, 51, 22));
-        iterations_stats->setMinimum(10);
+        iterations_stats->setMinimum(1000);
         iterations_stats->setMaximum(10000);
         iterations_stats->setSingleStep(100);
         iterations_stats->setValue(1000);
@@ -1348,7 +1350,7 @@ public:
         textBrowser_name->setObjectName(QString::fromUtf8("textBrowser_name"));
         textBrowser_name->setGeometry(QRect(0, 0, 191, 12001));
         QFont font4;
-        font4.setFamily(QString::fromUtf8("OpenSymbol"));
+        font4.setFamily(QString::fromUtf8("Ubuntu"));
         font4.setPointSize(7);
         textBrowser_name->setFont(font4);
         textBrowser_name->setFrameShape(QFrame::NoFrame);
@@ -3351,13 +3353,19 @@ public:
         meta_gem_isactive->setGeometry(QRect(452, 107, 47, 21));
         pushButton = new QPushButton(groupBox_22);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(680, 60, 181, 51));
+        pushButton->setGeometry(QRect(600, 50, 181, 51));
         QFont font9;
         font9.setPointSize(15);
         pushButton->setFont(font9);
         checkBox_simulate_stat_weights = new QCheckBox(groupBox_22);
         checkBox_simulate_stat_weights->setObjectName(QString::fromUtf8("checkBox_simulate_stat_weights"));
-        checkBox_simulate_stat_weights->setGeometry(QRect(700, 40, 151, 20));
+        checkBox_simulate_stat_weights->setGeometry(QRect(620, 30, 151, 20));
+        pushButton_save = new QPushButton(groupBox_22);
+        pushButton_save->setObjectName(QString::fromUtf8("pushButton_save"));
+        pushButton_save->setGeometry(QRect(790, 46, 91, 25));
+        pushButton_load = new QPushButton(groupBox_22);
+        pushButton_load->setObjectName(QString::fromUtf8("pushButton_load"));
+        pushButton_load->setGeometry(QRect(790, 76, 91, 25));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -3366,7 +3374,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(1);
+        tabWidget->setCurrentIndex(3);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -3861,6 +3869,8 @@ public:
         meta_gem_isactive->setText(QCoreApplication::translate("MainWindow", "Meta gem active?", nullptr));
         pushButton->setText(QCoreApplication::translate("MainWindow", "Simulate", nullptr));
         checkBox_simulate_stat_weights->setText(QCoreApplication::translate("MainWindow", "Simulate stat weights", nullptr));
+        pushButton_save->setText(QCoreApplication::translate("MainWindow", "Save Settings", nullptr));
+        pushButton_load->setText(QCoreApplication::translate("MainWindow", "Load Settings", nullptr));
     } // retranslateUi
 
 };
