@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Fury DPS Sim for 2.4.3</title>
+    <title>Fury DPS Sim</title>
     <style>
       html, body { padding: 0; margin : 0; overflow:hidden; height: 100% }
       /* the canvas *must not* have any border or padding, or mouse coords will be wrong */
@@ -36,7 +36,8 @@
               showLoader: function(loaderStatus) {
                   spinner.style.display = 'block';
                   canvas.style.display = 'none';
-                  status.innerHTML = loaderStatus + "...";
+                  /*status.innerHTML = loaderStatus + "..."; */
+                  status.innerHTML = "Preparing the target dummies...";
               },
               showError: function(errorText) {
                   status.innerHTML = errorText;
