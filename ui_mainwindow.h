@@ -870,7 +870,7 @@ public:
         label_36->setFont(font);
         iterations_execute = new QSpinBox(groupBox_4);
         iterations_execute->setObjectName(QString::fromUtf8("iterations_execute"));
-        iterations_execute->setGeometry(QRect(128, 24, 51, 22));
+        iterations_execute->setGeometry(QRect(118, 24, 61, 22));
         iterations_execute->setMinimum(2000);
         iterations_execute->setMaximum(10000);
         iterations_execute->setSingleStep(1000);
@@ -884,7 +884,7 @@ public:
         fightlength_execute->setValue(180);
         iterations_stats = new QSpinBox(groupBox_4);
         iterations_stats->setObjectName(QString::fromUtf8("iterations_stats"));
-        iterations_stats->setGeometry(QRect(128, 85, 51, 22));
+        iterations_stats->setGeometry(QRect(118, 85, 61, 22));
         iterations_stats->setMinimum(10000);
         iterations_stats->setMaximum(100000);
         iterations_stats->setSingleStep(5000);
@@ -898,7 +898,7 @@ public:
         fightlength_stats->setValue(360);
         iterations_proccs = new QSpinBox(groupBox_4);
         iterations_proccs->setObjectName(QString::fromUtf8("iterations_proccs"));
-        iterations_proccs->setGeometry(QRect(128, 144, 51, 22));
+        iterations_proccs->setGeometry(QRect(118, 144, 61, 22));
         iterations_proccs->setMinimum(500);
         iterations_proccs->setMaximum(10000);
         iterations_proccs->setSingleStep(500);
@@ -3438,11 +3438,11 @@ public:
         label_29->setText(QCoreApplication::translate("MainWindow", "Weapon Speed", nullptr));
         label_30->setText(QCoreApplication::translate("MainWindow", "Weapon damage", nullptr));
         groupBox_4->setTitle(QCoreApplication::translate("MainWindow", "Simulation Parameters", nullptr));
-        label_31->setText(QCoreApplication::translate("MainWindow", "Execute (Iterations)", nullptr));
+        label_31->setText(QCoreApplication::translate("MainWindow", "Execute (Fights)", nullptr));
         label_32->setText(QCoreApplication::translate("MainWindow", "Execute (Length)", nullptr));
-        label_33->setText(QCoreApplication::translate("MainWindow", "Weights (Iterations)", nullptr));
+        label_33->setText(QCoreApplication::translate("MainWindow", "Weights (Fights)", nullptr));
         label_34->setText(QCoreApplication::translate("MainWindow", "Weights (Length)", nullptr));
-        label_35->setText(QCoreApplication::translate("MainWindow", "Proccs (Iterations)", nullptr));
+        label_35->setText(QCoreApplication::translate("MainWindow", "Proccs (Fights)", nullptr));
         label_36->setText(QCoreApplication::translate("MainWindow", "Proccs (Length)", nullptr));
         groupBox_23->setTitle(QCoreApplication::translate("MainWindow", "Player", nullptr));
         label_39->setText(QCoreApplication::translate("MainWindow", "Race", nullptr));
