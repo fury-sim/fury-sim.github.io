@@ -89,20 +89,20 @@ static const uint qt_meta_data_simulator[] = {
       14,    6,  179,    2, 0x06 /* Public */,
 
  // signals: parameters
-    QMetaType::Void, QMetaType::QString, QMetaType::Float, QMetaType::Float, QMetaType::QString, QMetaType::QString,    2,    2,    2,    2,    2,
+    QMetaType::Void, QMetaType::QString, QMetaType::Double, QMetaType::Double, QMetaType::QString, QMetaType::QString,    2,    2,    2,    2,    2,
     QMetaType::Void, QMetaType::Int, QMetaType::QString,    2,    2,
-    QMetaType::Void, QMetaType::Int, QMetaType::Float,    2,    2,
+    QMetaType::Void, QMetaType::Int, QMetaType::Double,    2,    2,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::QString, QMetaType::Float,    2,    2,
-    QMetaType::Void, QMetaType::QString, QMetaType::Float,    2,    2,
-    QMetaType::Void, QMetaType::QString, QMetaType::Float,    2,    2,
-    QMetaType::Void, QMetaType::QString, QMetaType::Float,    2,    2,
-    QMetaType::Void, QMetaType::QString, QMetaType::Float, QMetaType::Float, QMetaType::Int, QMetaType::Int, QMetaType::Int,    2,    2,    2,    2,    2,    2,
-    QMetaType::Void, QMetaType::QString, QMetaType::Float, QMetaType::Float, QMetaType::Int, QMetaType::Int, QMetaType::Int,    2,    2,    2,    2,    2,    2,
-    QMetaType::Void, QMetaType::QString, QMetaType::Float, QMetaType::Float, QMetaType::Int, QMetaType::Int, QMetaType::Int,    2,    2,    2,    2,    2,    2,
-    QMetaType::Void, QMetaType::QString, QMetaType::Float, QMetaType::Float, QMetaType::Int, QMetaType::Int, QMetaType::Int,    2,    2,    2,    2,    2,    2,
-    QMetaType::Void, QMetaType::QString, QMetaType::Float, QMetaType::Float, QMetaType::Int, QMetaType::Int, QMetaType::Int,    2,    2,    2,    2,    2,    2,
+    QMetaType::Void, QMetaType::QString, QMetaType::Double,    2,    2,
+    QMetaType::Void, QMetaType::QString, QMetaType::Double,    2,    2,
+    QMetaType::Void, QMetaType::QString, QMetaType::Double,    2,    2,
+    QMetaType::Void, QMetaType::QString, QMetaType::Double,    2,    2,
+    QMetaType::Void, QMetaType::QString, QMetaType::Double, QMetaType::Double, QMetaType::Int, QMetaType::Int, QMetaType::Int,    2,    2,    2,    2,    2,    2,
+    QMetaType::Void, QMetaType::QString, QMetaType::Double, QMetaType::Double, QMetaType::Int, QMetaType::Int, QMetaType::Int,    2,    2,    2,    2,    2,    2,
+    QMetaType::Void, QMetaType::QString, QMetaType::Double, QMetaType::Double, QMetaType::Int, QMetaType::Int, QMetaType::Int,    2,    2,    2,    2,    2,    2,
+    QMetaType::Void, QMetaType::QString, QMetaType::Double, QMetaType::Double, QMetaType::Int, QMetaType::Int, QMetaType::Int,    2,    2,    2,    2,    2,    2,
+    QMetaType::Void, QMetaType::QString, QMetaType::Double, QMetaType::Double, QMetaType::Int, QMetaType::Int, QMetaType::Int,    2,    2,    2,    2,    2,    2,
 
        0        // eod
 };
@@ -113,26 +113,26 @@ void simulator::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
         auto *_t = static_cast<simulator *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->emitNewItemWeight((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< float(*)>(_a[2])),(*reinterpret_cast< float(*)>(_a[3])),(*reinterpret_cast< QString(*)>(_a[4])),(*reinterpret_cast< QString(*)>(_a[5]))); break;
+        case 0: _t->emitNewItemWeight((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< double(*)>(_a[2])),(*reinterpret_cast< double(*)>(_a[3])),(*reinterpret_cast< QString(*)>(_a[4])),(*reinterpret_cast< QString(*)>(_a[5]))); break;
         case 1: _t->emitNewSimulationStep((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< QString(*)>(_a[2]))); break;
-        case 2: _t->emitStatWeight((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< float(*)>(_a[2]))); break;
+        case 2: _t->emitStatWeight((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< double(*)>(_a[2]))); break;
         case 3: _t->emitIncProgress(); break;
         case 4: _t->emitFinished(); break;
-        case 5: _t->emitExecuteData((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< float(*)>(_a[2]))); break;
-        case 6: _t->emitAverageDPS((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< float(*)>(_a[2]))); break;
-        case 7: _t->emitProccUptime((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< float(*)>(_a[2]))); break;
-        case 8: _t->emitMiniStats((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< float(*)>(_a[2]))); break;
-        case 9: _t->emitWhiteHitData((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< float(*)>(_a[2])),(*reinterpret_cast< float(*)>(_a[3])),(*reinterpret_cast< int(*)>(_a[4])),(*reinterpret_cast< int(*)>(_a[5])),(*reinterpret_cast< int(*)>(_a[6]))); break;
-        case 10: _t->emitWhirlwindData((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< float(*)>(_a[2])),(*reinterpret_cast< float(*)>(_a[3])),(*reinterpret_cast< int(*)>(_a[4])),(*reinterpret_cast< int(*)>(_a[5])),(*reinterpret_cast< int(*)>(_a[6]))); break;
-        case 11: _t->emitExecuteData((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< float(*)>(_a[2])),(*reinterpret_cast< float(*)>(_a[3])),(*reinterpret_cast< int(*)>(_a[4])),(*reinterpret_cast< int(*)>(_a[5])),(*reinterpret_cast< int(*)>(_a[6]))); break;
-        case 12: _t->emitBloodthirstData((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< float(*)>(_a[2])),(*reinterpret_cast< float(*)>(_a[3])),(*reinterpret_cast< int(*)>(_a[4])),(*reinterpret_cast< int(*)>(_a[5])),(*reinterpret_cast< int(*)>(_a[6]))); break;
-        case 13: _t->emitHeroicStrikeData((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< float(*)>(_a[2])),(*reinterpret_cast< float(*)>(_a[3])),(*reinterpret_cast< int(*)>(_a[4])),(*reinterpret_cast< int(*)>(_a[5])),(*reinterpret_cast< int(*)>(_a[6]))); break;
+        case 5: _t->emitExecuteData((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< double(*)>(_a[2]))); break;
+        case 6: _t->emitAverageDPS((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< double(*)>(_a[2]))); break;
+        case 7: _t->emitProccUptime((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< double(*)>(_a[2]))); break;
+        case 8: _t->emitMiniStats((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< double(*)>(_a[2]))); break;
+        case 9: _t->emitWhiteHitData((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< double(*)>(_a[2])),(*reinterpret_cast< double(*)>(_a[3])),(*reinterpret_cast< int(*)>(_a[4])),(*reinterpret_cast< int(*)>(_a[5])),(*reinterpret_cast< int(*)>(_a[6]))); break;
+        case 10: _t->emitWhirlwindData((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< double(*)>(_a[2])),(*reinterpret_cast< double(*)>(_a[3])),(*reinterpret_cast< int(*)>(_a[4])),(*reinterpret_cast< int(*)>(_a[5])),(*reinterpret_cast< int(*)>(_a[6]))); break;
+        case 11: _t->emitExecuteData((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< double(*)>(_a[2])),(*reinterpret_cast< double(*)>(_a[3])),(*reinterpret_cast< int(*)>(_a[4])),(*reinterpret_cast< int(*)>(_a[5])),(*reinterpret_cast< int(*)>(_a[6]))); break;
+        case 12: _t->emitBloodthirstData((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< double(*)>(_a[2])),(*reinterpret_cast< double(*)>(_a[3])),(*reinterpret_cast< int(*)>(_a[4])),(*reinterpret_cast< int(*)>(_a[5])),(*reinterpret_cast< int(*)>(_a[6]))); break;
+        case 13: _t->emitHeroicStrikeData((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< double(*)>(_a[2])),(*reinterpret_cast< double(*)>(_a[3])),(*reinterpret_cast< int(*)>(_a[4])),(*reinterpret_cast< int(*)>(_a[5])),(*reinterpret_cast< int(*)>(_a[6]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
         int *result = reinterpret_cast<int *>(_a[0]);
         {
-            using _t = void (simulator::*)(QString , float , float , QString , QString );
+            using _t = void (simulator::*)(QString , double , double , QString , QString );
             if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&simulator::emitNewItemWeight)) {
                 *result = 0;
                 return;
@@ -146,7 +146,7 @@ void simulator::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
             }
         }
         {
-            using _t = void (simulator::*)(int , float );
+            using _t = void (simulator::*)(int , double );
             if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&simulator::emitStatWeight)) {
                 *result = 2;
                 return;
@@ -167,63 +167,63 @@ void simulator::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
             }
         }
         {
-            using _t = void (simulator::*)(QString , float );
+            using _t = void (simulator::*)(QString , double );
             if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&simulator::emitExecuteData)) {
                 *result = 5;
                 return;
             }
         }
         {
-            using _t = void (simulator::*)(QString , float );
+            using _t = void (simulator::*)(QString , double );
             if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&simulator::emitAverageDPS)) {
                 *result = 6;
                 return;
             }
         }
         {
-            using _t = void (simulator::*)(QString , float );
+            using _t = void (simulator::*)(QString , double );
             if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&simulator::emitProccUptime)) {
                 *result = 7;
                 return;
             }
         }
         {
-            using _t = void (simulator::*)(QString , float );
+            using _t = void (simulator::*)(QString , double );
             if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&simulator::emitMiniStats)) {
                 *result = 8;
                 return;
             }
         }
         {
-            using _t = void (simulator::*)(QString , float , float , int , int , int );
+            using _t = void (simulator::*)(QString , double , double , int , int , int );
             if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&simulator::emitWhiteHitData)) {
                 *result = 9;
                 return;
             }
         }
         {
-            using _t = void (simulator::*)(QString , float , float , int , int , int );
+            using _t = void (simulator::*)(QString , double , double , int , int , int );
             if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&simulator::emitWhirlwindData)) {
                 *result = 10;
                 return;
             }
         }
         {
-            using _t = void (simulator::*)(QString , float , float , int , int , int );
+            using _t = void (simulator::*)(QString , double , double , int , int , int );
             if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&simulator::emitExecuteData)) {
                 *result = 11;
                 return;
             }
         }
         {
-            using _t = void (simulator::*)(QString , float , float , int , int , int );
+            using _t = void (simulator::*)(QString , double , double , int , int , int );
             if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&simulator::emitBloodthirstData)) {
                 *result = 12;
                 return;
             }
         }
         {
-            using _t = void (simulator::*)(QString , float , float , int , int , int );
+            using _t = void (simulator::*)(QString , double , double , int , int , int );
             if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&simulator::emitHeroicStrikeData)) {
                 *result = 13;
                 return;
@@ -273,7 +273,7 @@ int simulator::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 
 // SIGNAL 0
-void simulator::emitNewItemWeight(QString _t1, float _t2, float _t3, QString _t4, QString _t5)
+void simulator::emitNewItemWeight(QString _t1, double _t2, double _t3, QString _t4, QString _t5)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t2))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t3))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t4))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t5))) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);
@@ -287,7 +287,7 @@ void simulator::emitNewSimulationStep(int _t1, QString _t2)
 }
 
 // SIGNAL 2
-void simulator::emitStatWeight(int _t1, float _t2)
+void simulator::emitStatWeight(int _t1, double _t2)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t2))) };
     QMetaObject::activate(this, &staticMetaObject, 2, _a);
@@ -306,63 +306,63 @@ void simulator::emitFinished()
 }
 
 // SIGNAL 5
-void simulator::emitExecuteData(QString _t1, float _t2)
+void simulator::emitExecuteData(QString _t1, double _t2)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t2))) };
     QMetaObject::activate(this, &staticMetaObject, 5, _a);
 }
 
 // SIGNAL 6
-void simulator::emitAverageDPS(QString _t1, float _t2)
+void simulator::emitAverageDPS(QString _t1, double _t2)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t2))) };
     QMetaObject::activate(this, &staticMetaObject, 6, _a);
 }
 
 // SIGNAL 7
-void simulator::emitProccUptime(QString _t1, float _t2)
+void simulator::emitProccUptime(QString _t1, double _t2)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t2))) };
     QMetaObject::activate(this, &staticMetaObject, 7, _a);
 }
 
 // SIGNAL 8
-void simulator::emitMiniStats(QString _t1, float _t2)
+void simulator::emitMiniStats(QString _t1, double _t2)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t2))) };
     QMetaObject::activate(this, &staticMetaObject, 8, _a);
 }
 
 // SIGNAL 9
-void simulator::emitWhiteHitData(QString _t1, float _t2, float _t3, int _t4, int _t5, int _t6)
+void simulator::emitWhiteHitData(QString _t1, double _t2, double _t3, int _t4, int _t5, int _t6)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t2))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t3))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t4))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t5))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t6))) };
     QMetaObject::activate(this, &staticMetaObject, 9, _a);
 }
 
 // SIGNAL 10
-void simulator::emitWhirlwindData(QString _t1, float _t2, float _t3, int _t4, int _t5, int _t6)
+void simulator::emitWhirlwindData(QString _t1, double _t2, double _t3, int _t4, int _t5, int _t6)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t2))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t3))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t4))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t5))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t6))) };
     QMetaObject::activate(this, &staticMetaObject, 10, _a);
 }
 
 // SIGNAL 11
-void simulator::emitExecuteData(QString _t1, float _t2, float _t3, int _t4, int _t5, int _t6)
+void simulator::emitExecuteData(QString _t1, double _t2, double _t3, int _t4, int _t5, int _t6)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t2))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t3))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t4))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t5))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t6))) };
     QMetaObject::activate(this, &staticMetaObject, 11, _a);
 }
 
 // SIGNAL 12
-void simulator::emitBloodthirstData(QString _t1, float _t2, float _t3, int _t4, int _t5, int _t6)
+void simulator::emitBloodthirstData(QString _t1, double _t2, double _t3, int _t4, int _t5, int _t6)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t2))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t3))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t4))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t5))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t6))) };
     QMetaObject::activate(this, &staticMetaObject, 12, _a);
 }
 
 // SIGNAL 13
-void simulator::emitHeroicStrikeData(QString _t1, float _t2, float _t3, int _t4, int _t5, int _t6)
+void simulator::emitHeroicStrikeData(QString _t1, double _t2, double _t3, int _t4, int _t5, int _t6)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t2))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t3))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t4))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t5))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t6))) };
     QMetaObject::activate(this, &staticMetaObject, 13, _a);

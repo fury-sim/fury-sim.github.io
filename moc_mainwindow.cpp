@@ -1221,9 +1221,9 @@ static const uint qt_meta_data_MainWindow[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void, QMetaType::Int, QMetaType::QString,    2,    2,
-    QMetaType::Void, QMetaType::Int, QMetaType::Float,    2,    2,
+    QMetaType::Void, QMetaType::Int, QMetaType::Double,    2,    2,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::QString, QMetaType::Float, QMetaType::Float, QMetaType::QString, QMetaType::QString,    2,    2,    2,    2,    2,
+    QMetaType::Void, QMetaType::QString, QMetaType::Double, QMetaType::Double, QMetaType::QString, QMetaType::QString,    2,    2,    2,    2,    2,
     QMetaType::QString, 0x80000000 | 229,    2,
     QMetaType::Void, QMetaType::Bool,    2,
     QMetaType::Void, QMetaType::Bool,  232,
@@ -1271,9 +1271,9 @@ static const uint qt_meta_data_MainWindow[] = {
     QMetaType::Void, QMetaType::QString,    9,
     QMetaType::Void, QMetaType::Bool,  232,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::QString, QMetaType::Float,    2,    2,
-    QMetaType::Void, QMetaType::QString, QMetaType::Float,    2,    2,
-    QMetaType::Void, QMetaType::QString, QMetaType::Float,    2,    2,
+    QMetaType::Void, QMetaType::QString, QMetaType::Double,    2,    2,
+    QMetaType::Void, QMetaType::QString, QMetaType::Double,    2,    2,
+    QMetaType::Void, QMetaType::QString, QMetaType::Double,    2,    2,
     0x80000000 | 281,
     0x80000000 | 283,
     0x80000000 | 285,
@@ -1292,12 +1292,12 @@ static const uint qt_meta_data_MainWindow[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::QString, QMetaType::Float,    2,    2,
-    QMetaType::Void, QMetaType::QString, QMetaType::Float, QMetaType::Float, QMetaType::Int, QMetaType::Int, QMetaType::Int,    2,    2,    2,    2,    2,    2,
-    QMetaType::Void, QMetaType::QString, QMetaType::Float, QMetaType::Float, QMetaType::Int, QMetaType::Int, QMetaType::Int,    2,    2,    2,    2,    2,    2,
-    QMetaType::Void, QMetaType::QString, QMetaType::Float, QMetaType::Float, QMetaType::Int, QMetaType::Int, QMetaType::Int,    2,    2,    2,    2,    2,    2,
-    QMetaType::Void, QMetaType::QString, QMetaType::Float, QMetaType::Float, QMetaType::Int, QMetaType::Int, QMetaType::Int,    2,    2,    2,    2,    2,    2,
-    QMetaType::Void, QMetaType::QString, QMetaType::Float, QMetaType::Float, QMetaType::Int, QMetaType::Int, QMetaType::Int,    2,    2,    2,    2,    2,    2,
+    QMetaType::Void, QMetaType::QString, QMetaType::Double,    2,    2,
+    QMetaType::Void, QMetaType::QString, QMetaType::Double, QMetaType::Double, QMetaType::Int, QMetaType::Int, QMetaType::Int,    2,    2,    2,    2,    2,    2,
+    QMetaType::Void, QMetaType::QString, QMetaType::Double, QMetaType::Double, QMetaType::Int, QMetaType::Int, QMetaType::Int,    2,    2,    2,    2,    2,    2,
+    QMetaType::Void, QMetaType::QString, QMetaType::Double, QMetaType::Double, QMetaType::Int, QMetaType::Int, QMetaType::Int,    2,    2,    2,    2,    2,    2,
+    QMetaType::Void, QMetaType::QString, QMetaType::Double, QMetaType::Double, QMetaType::Int, QMetaType::Int, QMetaType::Int,    2,    2,    2,    2,    2,    2,
+    QMetaType::Void, QMetaType::QString, QMetaType::Double, QMetaType::Double, QMetaType::Int, QMetaType::Int, QMetaType::Int,    2,    2,    2,    2,    2,    2,
     QMetaType::Void, QMetaType::QString,    9,
     QMetaType::Void,
     QMetaType::Void, QMetaType::Bool,  232,
@@ -1546,9 +1546,9 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 219: _t->on_pushButton_released(); break;
         case 220: _t->on_incrementCurrentProgress(); break;
         case 221: _t->on_newStep((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< QString(*)>(_a[2]))); break;
-        case 222: _t->on_statweightUpdate((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< float(*)>(_a[2]))); break;
+        case 222: _t->on_statweightUpdate((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< double(*)>(_a[2]))); break;
         case 223: _t->updateItemselectionStatText(); break;
-        case 224: _t->on_newItemWeight((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< float(*)>(_a[2])),(*reinterpret_cast< float(*)>(_a[3])),(*reinterpret_cast< QString(*)>(_a[4])),(*reinterpret_cast< QString(*)>(_a[5]))); break;
+        case 224: _t->on_newItemWeight((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< double(*)>(_a[2])),(*reinterpret_cast< double(*)>(_a[3])),(*reinterpret_cast< QString(*)>(_a[4])),(*reinterpret_cast< QString(*)>(_a[5]))); break;
         case 225: { QString _r = _t->BonusStatToQString((*reinterpret_cast< bonus(*)>(_a[1])));
             if (_a[0]) *reinterpret_cast< QString*>(_a[0]) = std::move(_r); }  break;
         case 226: _t->canEdit((*reinterpret_cast< bool(*)>(_a[1]))); break;
@@ -1597,9 +1597,9 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 269: _t->on_comboBox_weapon_enchantment_currentTextChanged((*reinterpret_cast< const QString(*)>(_a[1]))); break;
         case 270: _t->on_checkBox_draenei_hit_aura_toggled((*reinterpret_cast< bool(*)>(_a[1]))); break;
         case 271: _t->on_emitFinished(); break;
-        case 272: _t->on_emitExecuteData((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< float(*)>(_a[2]))); break;
-        case 273: _t->on_emitAverageDPS((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< float(*)>(_a[2]))); break;
-        case 274: _t->on_emitProccUptime((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< float(*)>(_a[2]))); break;
+        case 272: _t->on_emitExecuteData((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< double(*)>(_a[2]))); break;
+        case 273: _t->on_emitAverageDPS((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< double(*)>(_a[2]))); break;
+        case 274: _t->on_emitProccUptime((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< double(*)>(_a[2]))); break;
         case 275: { std::list<item> _r = _t->getItemListByContent();
             if (_a[0]) *reinterpret_cast< std::list<item>*>(_a[0]) = std::move(_r); }  break;
         case 276: { std::list<weapon> _r = _t->getWeaponListByContent();
@@ -1622,12 +1622,12 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 290: _t->on_checkBox_items_raid_toggled(); break;
         case 291: _t->on_checkBox_items_arena_toggled(); break;
         case 292: _t->on_checkBox_items_battlegrounds_toggled(); break;
-        case 293: _t->on_emitMiniStats((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< float(*)>(_a[2]))); break;
-        case 294: _t->on_emitWhiteHitData((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< float(*)>(_a[2])),(*reinterpret_cast< float(*)>(_a[3])),(*reinterpret_cast< int(*)>(_a[4])),(*reinterpret_cast< int(*)>(_a[5])),(*reinterpret_cast< int(*)>(_a[6]))); break;
-        case 295: _t->on_emitWhirlwindData((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< float(*)>(_a[2])),(*reinterpret_cast< float(*)>(_a[3])),(*reinterpret_cast< int(*)>(_a[4])),(*reinterpret_cast< int(*)>(_a[5])),(*reinterpret_cast< int(*)>(_a[6]))); break;
-        case 296: _t->on_emitExecuteData((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< float(*)>(_a[2])),(*reinterpret_cast< float(*)>(_a[3])),(*reinterpret_cast< int(*)>(_a[4])),(*reinterpret_cast< int(*)>(_a[5])),(*reinterpret_cast< int(*)>(_a[6]))); break;
-        case 297: _t->on_emitBloodthirstData((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< float(*)>(_a[2])),(*reinterpret_cast< float(*)>(_a[3])),(*reinterpret_cast< int(*)>(_a[4])),(*reinterpret_cast< int(*)>(_a[5])),(*reinterpret_cast< int(*)>(_a[6]))); break;
-        case 298: _t->on_emitHeroicStrikeData((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< float(*)>(_a[2])),(*reinterpret_cast< float(*)>(_a[3])),(*reinterpret_cast< int(*)>(_a[4])),(*reinterpret_cast< int(*)>(_a[5])),(*reinterpret_cast< int(*)>(_a[6]))); break;
+        case 293: _t->on_emitMiniStats((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< double(*)>(_a[2]))); break;
+        case 294: _t->on_emitWhiteHitData((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< double(*)>(_a[2])),(*reinterpret_cast< double(*)>(_a[3])),(*reinterpret_cast< int(*)>(_a[4])),(*reinterpret_cast< int(*)>(_a[5])),(*reinterpret_cast< int(*)>(_a[6]))); break;
+        case 295: _t->on_emitWhirlwindData((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< double(*)>(_a[2])),(*reinterpret_cast< double(*)>(_a[3])),(*reinterpret_cast< int(*)>(_a[4])),(*reinterpret_cast< int(*)>(_a[5])),(*reinterpret_cast< int(*)>(_a[6]))); break;
+        case 296: _t->on_emitExecuteData((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< double(*)>(_a[2])),(*reinterpret_cast< double(*)>(_a[3])),(*reinterpret_cast< int(*)>(_a[4])),(*reinterpret_cast< int(*)>(_a[5])),(*reinterpret_cast< int(*)>(_a[6]))); break;
+        case 297: _t->on_emitBloodthirstData((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< double(*)>(_a[2])),(*reinterpret_cast< double(*)>(_a[3])),(*reinterpret_cast< int(*)>(_a[4])),(*reinterpret_cast< int(*)>(_a[5])),(*reinterpret_cast< int(*)>(_a[6]))); break;
+        case 298: _t->on_emitHeroicStrikeData((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< double(*)>(_a[2])),(*reinterpret_cast< double(*)>(_a[3])),(*reinterpret_cast< int(*)>(_a[4])),(*reinterpret_cast< int(*)>(_a[5])),(*reinterpret_cast< int(*)>(_a[6]))); break;
         case 299: _t->on_player_race_currentTextChanged((*reinterpret_cast< const QString(*)>(_a[1]))); break;
         case 300: _t->on_pushButton_clicked(); break;
         case 301: _t->on_checkBox_imp_hunters_mark_clicked((*reinterpret_cast< bool(*)>(_a[1]))); break;

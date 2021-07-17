@@ -871,10 +871,10 @@ public:
         iterations_execute = new QSpinBox(groupBox_4);
         iterations_execute->setObjectName(QString::fromUtf8("iterations_execute"));
         iterations_execute->setGeometry(QRect(128, 24, 51, 22));
-        iterations_execute->setMinimum(80);
+        iterations_execute->setMinimum(2000);
         iterations_execute->setMaximum(10000);
-        iterations_execute->setSingleStep(100);
-        iterations_execute->setValue(200);
+        iterations_execute->setSingleStep(1000);
+        iterations_execute->setValue(2000);
         fightlength_execute = new QSpinBox(groupBox_4);
         fightlength_execute->setObjectName(QString::fromUtf8("fightlength_execute"));
         fightlength_execute->setGeometry(QRect(128, 54, 51, 22));
@@ -885,10 +885,10 @@ public:
         iterations_stats = new QSpinBox(groupBox_4);
         iterations_stats->setObjectName(QString::fromUtf8("iterations_stats"));
         iterations_stats->setGeometry(QRect(128, 85, 51, 22));
-        iterations_stats->setMinimum(1000);
-        iterations_stats->setMaximum(10000);
-        iterations_stats->setSingleStep(100);
-        iterations_stats->setValue(1000);
+        iterations_stats->setMinimum(10000);
+        iterations_stats->setMaximum(100000);
+        iterations_stats->setSingleStep(5000);
+        iterations_stats->setValue(20000);
         fightlength_stats = new QSpinBox(groupBox_4);
         fightlength_stats->setObjectName(QString::fromUtf8("fightlength_stats"));
         fightlength_stats->setGeometry(QRect(128, 114, 51, 22));
@@ -899,10 +899,10 @@ public:
         iterations_proccs = new QSpinBox(groupBox_4);
         iterations_proccs->setObjectName(QString::fromUtf8("iterations_proccs"));
         iterations_proccs->setGeometry(QRect(128, 144, 51, 22));
-        iterations_proccs->setMinimum(40);
+        iterations_proccs->setMinimum(500);
         iterations_proccs->setMaximum(10000);
-        iterations_proccs->setSingleStep(100);
-        iterations_proccs->setValue(40);
+        iterations_proccs->setSingleStep(500);
+        iterations_proccs->setValue(500);
         fightlength_proccs = new QSpinBox(groupBox_4);
         fightlength_proccs->setObjectName(QString::fromUtf8("fightlength_proccs"));
         fightlength_proccs->setGeometry(QRect(128, 174, 51, 22));
@@ -1025,11 +1025,12 @@ public:
         scrollAreaWidgetContents->setMaximumSize(QSize(16777215, 800));
         textBrowser_executemethod_text = new QTextBrowser(scrollAreaWidgetContents);
         textBrowser_executemethod_text->setObjectName(QString::fromUtf8("textBrowser_executemethod_text"));
-        textBrowser_executemethod_text->setGeometry(QRect(0, 20, 221, 81));
+        textBrowser_executemethod_text->setGeometry(QRect(0, 20, 221, 101));
+        textBrowser_executemethod_text->setFont(font2);
         textBrowser_executemethod_text->setFrameShape(QFrame::NoFrame);
         textBrowser_average_dps = new QTextBrowser(scrollAreaWidgetContents);
         textBrowser_average_dps->setObjectName(QString::fromUtf8("textBrowser_average_dps"));
-        textBrowser_average_dps->setGeometry(QRect(0, 100, 201, 31));
+        textBrowser_average_dps->setGeometry(QRect(0, 120, 201, 22));
         textBrowser_average_dps->setFrameShape(QFrame::NoFrame);
         textBrowser_average_dps->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         textBrowser_average_dps->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
@@ -1052,7 +1053,7 @@ public:
         textBrowser_item_procc_uptimes_double->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         textBrowser_ministats_breakdown_text = new QTextBrowser(scrollAreaWidgetContents);
         textBrowser_ministats_breakdown_text->setObjectName(QString::fromUtf8("textBrowser_ministats_breakdown_text"));
-        textBrowser_ministats_breakdown_text->setGeometry(QRect(0, 130, 201, 141));
+        textBrowser_ministats_breakdown_text->setGeometry(QRect(0, 140, 201, 131));
         textBrowser_ministats_breakdown_text->setFrameShape(QFrame::NoFrame);
         textBrowser_ministats_breakdown_text->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         textBrowser_ministats_breakdown_text->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
@@ -1088,18 +1089,19 @@ public:
         textBrowser_stats_executemethod_title->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         textBrowser_executemethod_number = new QTextBrowser(scrollAreaWidgetContents);
         textBrowser_executemethod_number->setObjectName(QString::fromUtf8("textBrowser_executemethod_number"));
-        textBrowser_executemethod_number->setGeometry(QRect(220, 20, 51, 81));
+        textBrowser_executemethod_number->setGeometry(QRect(220, 20, 51, 101));
+        textBrowser_executemethod_number->setFont(font2);
         textBrowser_executemethod_number->setFrameShape(QFrame::NoFrame);
         textBrowser_average_dps_number = new QTextBrowser(scrollAreaWidgetContents);
         textBrowser_average_dps_number->setObjectName(QString::fromUtf8("textBrowser_average_dps_number"));
-        textBrowser_average_dps_number->setGeometry(QRect(200, 99, 71, 31));
+        textBrowser_average_dps_number->setGeometry(QRect(200, 120, 71, 22));
         textBrowser_average_dps_number->setFrameShape(QFrame::NoFrame);
         textBrowser_average_dps_number->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         textBrowser_average_dps_number->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         textBrowser_average_dps_number->setSizeAdjustPolicy(QAbstractScrollArea::AdjustToContentsOnFirstShow);
         textBrowser_ministats_breakdown_number = new QTextBrowser(scrollAreaWidgetContents);
         textBrowser_ministats_breakdown_number->setObjectName(QString::fromUtf8("textBrowser_ministats_breakdown_number"));
-        textBrowser_ministats_breakdown_number->setGeometry(QRect(200, 130, 71, 141));
+        textBrowser_ministats_breakdown_number->setGeometry(QRect(200, 140, 71, 131));
         textBrowser_ministats_breakdown_number->setFrameShape(QFrame::NoFrame);
         textBrowser_ministats_breakdown_number->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         textBrowser_ministats_breakdown_number->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
@@ -3374,7 +3376,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(3);
+        tabWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
