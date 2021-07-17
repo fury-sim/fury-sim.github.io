@@ -977,7 +977,7 @@ public:
         label_50->setFont(font);
         label_51 = new QLabel(groupBox_26);
         label_51->setObjectName(QString::fromUtf8("label_51"));
-        label_51->setGeometry(QRect(10, 183, 91, 13));
+        label_51->setGeometry(QRect(10, 183, 91, 16));
         label_51->setFont(font);
         label_52 = new QLabel(groupBox_26);
         label_52->setObjectName(QString::fromUtf8("label_52"));
