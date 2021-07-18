@@ -871,7 +871,7 @@ public:
         iterations_execute = new QSpinBox(groupBox_4);
         iterations_execute->setObjectName(QString::fromUtf8("iterations_execute"));
         iterations_execute->setGeometry(QRect(118, 24, 61, 22));
-        iterations_execute->setMinimum(2000);
+        iterations_execute->setMinimum(1);
         iterations_execute->setMaximum(10000);
         iterations_execute->setSingleStep(1000);
         iterations_execute->setValue(2000);
@@ -885,7 +885,7 @@ public:
         iterations_stats = new QSpinBox(groupBox_4);
         iterations_stats->setObjectName(QString::fromUtf8("iterations_stats"));
         iterations_stats->setGeometry(QRect(118, 85, 61, 22));
-        iterations_stats->setMinimum(10000);
+        iterations_stats->setMinimum(1);
         iterations_stats->setMaximum(100000);
         iterations_stats->setSingleStep(5000);
         iterations_stats->setValue(20000);
