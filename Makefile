@@ -737,6 +737,7 @@ qrc_icons.cpp: ../fury-dps-sim/icons.qrc \
 		../fury-dps-sim/item_icons/ring/inv_jewelry_ring_71.jpg \
 		../fury-dps-sim/item_icons/ring/inv_jewelry_ring_16.jpg \
 		../fury-dps-sim/item_icons/ring/inv_jewelry_ring_60.jpg \
+		../fury-dps-sim/item_icons/ring/inv_jewelry_ring_62.jpg \
 		../fury-dps-sim/item_icons/ring/inv_jewelry_ring_04.jpg \
 		../fury-dps-sim/item_icons/ring/inv_jewelry_ring_53naxxramas.jpg \
 		../fury-dps-sim/item_icons/ring/inv_jewelry_ring_64.jpg \
