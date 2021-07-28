@@ -35,12 +35,6 @@ public:
     QWidget *centralwidget;
     QTabWidget *tabWidget;
     QWidget *tab_4;
-    QLabel *label_53;
-    QLabel *label_54;
-    QLabel *label_56;
-    QLabel *label_57;
-    QLabel *label_58;
-    QLabel *label_59;
     QLabel *label_60;
     QLabel *label_61;
     QLabel *label_62;
@@ -638,40 +632,13 @@ public:
         tabWidget->setMovable(false);
         tab_4 = new QWidget();
         tab_4->setObjectName(QString::fromUtf8("tab_4"));
-        label_53 = new QLabel(tab_4);
-        label_53->setObjectName(QString::fromUtf8("label_53"));
-        label_53->setGeometry(QRect(30, 30, 151, 16));
+        label_60 = new QLabel(tab_4);
+        label_60->setObjectName(QString::fromUtf8("label_60"));
+        label_60->setGeometry(QRect(670, 570, 101, 16));
         QFont font1;
         font1.setPointSize(9);
         font1.setBold(true);
         font1.setWeight(75);
-        label_53->setFont(font1);
-        label_54 = new QLabel(tab_4);
-        label_54->setObjectName(QString::fromUtf8("label_54"));
-        label_54->setGeometry(QRect(30, 50, 811, 261));
-        label_54->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop);
-        label_54->setWordWrap(true);
-        label_56 = new QLabel(tab_4);
-        label_56->setObjectName(QString::fromUtf8("label_56"));
-        label_56->setGeometry(QRect(30, 430, 81, 16));
-        label_56->setFont(font1);
-        label_57 = new QLabel(tab_4);
-        label_57->setObjectName(QString::fromUtf8("label_57"));
-        label_57->setGeometry(QRect(30, 450, 361, 51));
-        label_57->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop);
-        label_57->setWordWrap(true);
-        label_58 = new QLabel(tab_4);
-        label_58->setObjectName(QString::fromUtf8("label_58"));
-        label_58->setGeometry(QRect(30, 520, 101, 16));
-        label_58->setFont(font1);
-        label_59 = new QLabel(tab_4);
-        label_59->setObjectName(QString::fromUtf8("label_59"));
-        label_59->setGeometry(QRect(30, 540, 531, 151));
-        label_59->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop);
-        label_59->setWordWrap(true);
-        label_60 = new QLabel(tab_4);
-        label_60->setObjectName(QString::fromUtf8("label_60"));
-        label_60->setGeometry(QRect(670, 570, 101, 16));
         label_60->setFont(font1);
         label_61 = new QLabel(tab_4);
         label_61->setObjectName(QString::fromUtf8("label_61"));
@@ -685,13 +652,16 @@ public:
         label_61->setOpenExternalLinks(true);
         label_62 = new QLabel(tab_4);
         label_62->setObjectName(QString::fromUtf8("label_62"));
-        label_62->setGeometry(QRect(30, 300, 81, 16));
+        label_62->setGeometry(QRect(130, 570, 101, 16));
         label_62->setFont(font1);
         label_63 = new QLabel(tab_4);
         label_63->setObjectName(QString::fromUtf8("label_63"));
-        label_63->setGeometry(QRect(30, 320, 511, 101));
+        label_63->setGeometry(QRect(130, 590, 311, 81));
+        label_63->setFont(font2);
+        label_63->setTextFormat(Qt::RichText);
         label_63->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop);
         label_63->setWordWrap(true);
+        label_63->setOpenExternalLinks(true);
         tabWidget->addTab(tab_4, QString());
         tab = new QWidget();
         tab->setObjectName(QString::fromUtf8("tab"));
@@ -825,7 +795,7 @@ public:
         extrastats_expertise->setGeometry(QRect(132, 237, 42, 22));
         extrastats_expertise->setMaximum(150);
         extrastats_expertise->setSingleStep(4);
-        extrastats_expertise->setValue(16);
+        extrastats_expertise->setValue(8);
         extrastats_attackdamage = new QSpinBox(groupBox_2);
         extrastats_attackdamage->setObjectName(QString::fromUtf8("extrastats_attackdamage"));
         extrastats_attackdamage->setGeometry(QRect(132, 297, 42, 22));
@@ -3376,7 +3346,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(1);
+        tabWidget->setCurrentIndex(2);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -3385,42 +3355,13 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "Fury Warrior DPS Sim for 2.4.3", nullptr));
-        label_53->setText(QCoreApplication::translate("MainWindow", "<b> How does this work? </b>", nullptr));
-        label_54->setText(QCoreApplication::translate("MainWindow", "The tool will simulate <b>\"Weights (Iterations)</b> fights and output fight information in the top window in the simulation-tab.<br>\n"
-"<br>\n"
-"If <b>\"Simulate stat weights\"</b> is ticked it will simulate the same amount of iterations where it add the bonus stats that are chosen under <b>\"Extra Simulation Stats (Weights)\"</b> one at a time. The difference between the initial DPS and the DPS with the added stats will be used to calculate stat weights. These are in turn used to calculate item weights which are displayed in the bottom window of the simulation-tab.<br>\n"
-"The <b>\"Procc (Iterations)\"</b> are used to calculate the uptime of proc items. This is used to properly calculate the stat weights in the current gear. There are 15+ items that are all added for simulation, so don't simulate each item over too many iterations. Around 100 iterations should be sufficient to get decently accurate uptimes.<br>\n"
-"<br>\n"
-"The less stats are added to calculate weights more iterations you need to simulate t"
-                        "o get correct weights. At the same time adding too many stats when calculating weights will move you further away from the actual weights. E.g. adding 400 armor penetration when you are 200 away from the cap. Chose the correct amount of iterations and added stats to find the balance between how precise you want the weights, how long you want to simulate and how far away from the actual stat weights you want.<br>\n"
-"<br>\n"
-"Hopefully setting gear, talents and buffs should not require explanation.", nullptr));
-        label_56->setText(QCoreApplication::translate("MainWindow", "Known Bugs", nullptr));
-        label_57->setText(QCoreApplication::translate("MainWindow", "Talents that should be locked are sometimes selectable.\n"
-"Bloodthirst scales with everything.\n"
-"Weapon tooltips are weird (quick implementation)", nullptr));
-        label_58->setText(QCoreApplication::translate("MainWindow", "Coming up!", nullptr));
-        label_59->setText(QCoreApplication::translate("MainWindow", "Simulation speedups (by a lot!)\n"
-"Loading and saving settings to a local file\n"
-"Threading\n"
-"Tooltips (Needs a fix)\n"
-"More statistics\n"
-"New GUI now that it's a website\n"
-"More options (when to pop pot/lust etc.)\n"
-"Unique Gems (JC/Heroics)\n"
-"More procc items (Solarian dagger, SSH fist weap, the night blade)\n"
-"Feedback on activated setbonuses.", nullptr));
         label_60->setText(QCoreApplication::translate("MainWindow", "Support?", nullptr));
         label_61->setText(QCoreApplication::translate("MainWindow", "I did not mean to redistribute this, but as i spent a lot of time on it i added a GUI and hope it can be useful for someone else as well.\n"
 "\n"
 " <br><br><a href=\"https://www.patreon.com/rendz\"><b>For those that wants to support :-)</a>\n"
 "", nullptr));
-        label_62->setText(QCoreApplication::translate("MainWindow", "<b> General </b>", nullptr));
-        label_63->setText(QCoreApplication::translate("MainWindow", "Around 3k iterations will give a decent stat weight output.<br>\n"
-"On patches after 2.0 epic gems are used to calculate item stat weights.<br>\n"
-"Chosing Patch 2.0 will use patch 2.0 item stats which are different from classic tbc.<br>\n"
-"All TBC setbonuses and proccs are added but there is no feedback in the GUI.<br>\n"
-"There are currently no classic items added to the tool.<br>", nullptr));
+        label_62->setText(QCoreApplication::translate("MainWindow", "Bugtracker", nullptr));
+        label_63->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p>Please add bug reports and suggestions at <br/><br/><a href=\"https://github.com/fury-sim/bugtracker\"><span style=\" text-decoration: underline; color:#0000ff;\">https://github.com/fury-sim/bugtracker</span></a></p></body></html>", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_4), QCoreApplication::translate("MainWindow", "Info", nullptr));
         groupBox->setTitle(QCoreApplication::translate("MainWindow", "Target", nullptr));
         label_3->setText(QCoreApplication::translate("MainWindow", "Level", nullptr));
