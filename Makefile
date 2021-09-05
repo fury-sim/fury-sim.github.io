@@ -62,6 +62,7 @@ SOURCES       = ../fury-dps-sim/abilities.cpp \
 		../fury-dps-sim/main.cpp \
 		../fury-dps-sim/mainwindow.cpp \
 		../fury-dps-sim/simulator.cpp \
+		../fury-dps-sim/talents.cpp \
 		../fury-dps-sim/warriorclass.cpp \
 		../fury-dps-sim/warrioritems.cpp \
 		../fury-dps-sim/warriorspells.cpp \
@@ -81,6 +82,7 @@ OBJECTS       = abilities.o \
 		main.o \
 		mainwindow.o \
 		simulator.o \
+		talents.o \
 		warriorclass.o \
 		warrioritems.o \
 		warriorspells.o \
@@ -197,6 +199,7 @@ DIST          = ../../Qt/5.14.2/qt5_wasm_binaries/mkspecs/features/spec_pre.prf 
 		../fury-dps-sim/main.cpp \
 		../fury-dps-sim/mainwindow.cpp \
 		../fury-dps-sim/simulator.cpp \
+		../fury-dps-sim/talents.cpp \
 		../fury-dps-sim/warriorclass.cpp \
 		../fury-dps-sim/warrioritems.cpp \
 		../fury-dps-sim/warriorspells.cpp \
@@ -416,7 +419,7 @@ distdir: FORCE
 	$(COPY_FILE) --parents ../fury-dps-sim/icons.qrc $(DISTDIR)/
 	$(COPY_FILE) --parents ../../Qt/5.14.2/qt5_wasm_binaries/mkspecs/features/data/dummy.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../fury-dps-sim/abilities.h ../fury-dps-sim/backend.h ../fury-dps-sim/clickablelabel.h ../fury-dps-sim/items.h ../fury-dps-sim/logger.h ../fury-dps-sim/mainwindow.h ../fury-dps-sim/simulator.h ../fury-dps-sim/warrior.h ../fury-dps-sim/types.h ../fury-dps-sim/utilities.h ../fury-dps-sim/enchantments.h ../fury-dps-sim/itemlists.h ../fury-dps-sim/talents.h ../fury-dps-sim/config.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../fury-dps-sim/abilities.cpp ../fury-dps-sim/backend.cpp ../fury-dps-sim/clickablelabel.cpp ../fury-dps-sim/enchantments.cpp ../fury-dps-sim/itemlists.cpp ../fury-dps-sim/items.cpp ../fury-dps-sim/logger.cpp ../fury-dps-sim/main.cpp ../fury-dps-sim/mainwindow.cpp ../fury-dps-sim/simulator.cpp ../fury-dps-sim/warriorclass.cpp ../fury-dps-sim/warrioritems.cpp ../fury-dps-sim/warriorspells.cpp ../fury-dps-sim/types.cpp ../fury-dps-sim/utilities.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../fury-dps-sim/abilities.cpp ../fury-dps-sim/backend.cpp ../fury-dps-sim/clickablelabel.cpp ../fury-dps-sim/enchantments.cpp ../fury-dps-sim/itemlists.cpp ../fury-dps-sim/items.cpp ../fury-dps-sim/logger.cpp ../fury-dps-sim/main.cpp ../fury-dps-sim/mainwindow.cpp ../fury-dps-sim/simulator.cpp ../fury-dps-sim/talents.cpp ../fury-dps-sim/warriorclass.cpp ../fury-dps-sim/warrioritems.cpp ../fury-dps-sim/warriorspells.cpp ../fury-dps-sim/types.cpp ../fury-dps-sim/utilities.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../fury-dps-sim/mainwindow.ui $(DISTDIR)/
 
 
@@ -468,6 +471,7 @@ qrc_icons.cpp: ../fury-dps-sim/icons.qrc \
 		../../Qt/5.14.2/qt5_wasm_binaries/bin/rcc \
 		../fury-dps-sim/data.json \
 		../fury-dps-sim/enchant_icons/ability_druid_demoralizingroar.jpg \
+		../fury-dps-sim/enchant_icons/inv_misc_armorkit_21.jpg \
 		../fury-dps-sim/enchant_icons/inv_misc_armorkit_25.jpg \
 		../fury-dps-sim/enchant_icons/ability_dualwield.jpg \
 		../fury-dps-sim/enchant_icons/spell_holy_weaponmastery.jpg \
@@ -1773,9 +1777,6 @@ moc_mainwindow.cpp: ../fury-dps-sim/mainwindow.h \
 		../fury-dps-sim/simulator.h \
 		../fury-dps-sim/warrior.h \
 		../fury-dps-sim/talents.h \
-		../fury-dps-sim/weightcalculations.h \
-		../fury-dps-sim/sim.h \
-		../fury-dps-sim/transmitter.h \
 		../fury-dps-sim/backend.h \
 		../fury-dps-sim/logger.h \
 		../fury-dps-sim/abilities.h \
@@ -2255,9 +2256,6 @@ moc_simulator.cpp: ../fury-dps-sim/simulator.h \
 		../fury-dps-sim/enchantments.h \
 		../fury-dps-sim/types.h \
 		../fury-dps-sim/config.h \
-		../fury-dps-sim/weightcalculations.h \
-		../fury-dps-sim/sim.h \
-		../fury-dps-sim/transmitter.h \
 		../fury-dps-sim/utilities.h \
 		../fury-dps-sim/backend.h \
 		../fury-dps-sim/logger.h \
@@ -5205,9 +5203,6 @@ main.o: ../fury-dps-sim/main.cpp ../fury-dps-sim/mainwindow.h \
 		../fury-dps-sim/simulator.h \
 		../fury-dps-sim/warrior.h \
 		../fury-dps-sim/talents.h \
-		../fury-dps-sim/weightcalculations.h \
-		../fury-dps-sim/sim.h \
-		../fury-dps-sim/transmitter.h \
 		../fury-dps-sim/backend.h \
 		../fury-dps-sim/logger.h \
 		../fury-dps-sim/abilities.h
@@ -5704,9 +5699,6 @@ mainwindow.o: ../fury-dps-sim/mainwindow.cpp ../fury-dps-sim/mainwindow.h \
 		../fury-dps-sim/simulator.h \
 		../fury-dps-sim/warrior.h \
 		../fury-dps-sim/talents.h \
-		../fury-dps-sim/weightcalculations.h \
-		../fury-dps-sim/sim.h \
-		../fury-dps-sim/transmitter.h \
 		../fury-dps-sim/backend.h \
 		../fury-dps-sim/logger.h \
 		../fury-dps-sim/abilities.h
@@ -6184,15 +6176,15 @@ simulator.o: ../fury-dps-sim/simulator.cpp ../fury-dps-sim/simulator.h \
 		../fury-dps-sim/enchantments.h \
 		../fury-dps-sim/types.h \
 		../fury-dps-sim/config.h \
-		../fury-dps-sim/weightcalculations.h \
-		../fury-dps-sim/sim.h \
-		../fury-dps-sim/transmitter.h \
 		../fury-dps-sim/utilities.h \
 		../fury-dps-sim/backend.h \
 		../fury-dps-sim/logger.h \
 		../fury-dps-sim/abilities.h \
 		../fury-dps-sim/itemlists.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o simulator.o ../fury-dps-sim/simulator.cpp
+
+talents.o: ../fury-dps-sim/talents.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o talents.o ../fury-dps-sim/talents.cpp
 
 warriorclass.o: ../fury-dps-sim/warriorclass.cpp ../fury-dps-sim/warrior.h \
 		../../Qt/5.14.2/qt5_wasm_binaries/include/QtCore/QtCore \

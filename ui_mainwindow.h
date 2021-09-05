@@ -848,7 +848,7 @@ public:
         fightlength_execute = new QSpinBox(groupBox_4);
         fightlength_execute->setObjectName(QString::fromUtf8("fightlength_execute"));
         fightlength_execute->setGeometry(QRect(128, 54, 51, 22));
-        fightlength_execute->setMinimum(100);
+        fightlength_execute->setMinimum(30);
         fightlength_execute->setMaximum(1200);
         fightlength_execute->setSingleStep(30);
         fightlength_execute->setValue(180);
@@ -869,7 +869,7 @@ public:
         iterations_proccs = new QSpinBox(groupBox_4);
         iterations_proccs->setObjectName(QString::fromUtf8("iterations_proccs"));
         iterations_proccs->setGeometry(QRect(118, 144, 61, 22));
-        iterations_proccs->setMinimum(500);
+        iterations_proccs->setMinimum(1);
         iterations_proccs->setMaximum(10000);
         iterations_proccs->setSingleStep(500);
         iterations_proccs->setValue(500);
@@ -3346,7 +3346,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(2);
+        tabWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
