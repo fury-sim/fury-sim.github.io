@@ -627,6 +627,7 @@ qrc_icons.cpp: ../fury-dps-sim/icons.qrc \
 		../fury-dps-sim/item_icons/belt/inv_belt_22.jpg \
 		../fury-dps-sim/item_icons/belt/inv_belt_26.jpg \
 		../fury-dps-sim/item_icons/belt/inv_belt_13.jpg \
+		../fury-dps-sim/item_icons/neck/inv_jewelry_necklace_07.jpg \
 		../fury-dps-sim/item_icons/neck/inv_jewelry_necklace_ahnqiraj_01.jpg \
 		../fury-dps-sim/item_icons/neck/inv_misc_noose_01.jpg \
 		../fury-dps-sim/item_icons/neck/inv_jewelry_necklace_ahnqiraj_02.jpg \
@@ -652,6 +653,7 @@ qrc_icons.cpp: ../fury-dps-sim/icons.qrc \
 		../fury-dps-sim/item_icons/chest/inv_chest_plate02.jpg \
 		../fury-dps-sim/item_icons/chest/inv_chest_plate05.jpg \
 		../fury-dps-sim/item_icons/chest/inv_chest_plate08.jpg \
+		../fury-dps-sim/item_icons/chest/inv_chest_plate09.jpg \
 		../fury-dps-sim/item_icons/chest/inv_chest_chain_12.jpg \
 		../fury-dps-sim/item_icons/chest/inv_chest_chain_13.jpg \
 		../fury-dps-sim/item_icons/chest/inv_chest_cloth_07.jpg \
@@ -1647,11 +1649,6 @@ moc_mainwindow.cpp: ../fury-dps-sim/mainwindow.h \
 		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qlabel.h \
 		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/QMainWindow \
 		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qmainwindow.h \
-		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/QMenuBar \
-		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qmenubar.h \
-		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qmenu.h \
-		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qaction.h \
-		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qactiongroup.h \
 		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/QProgressBar \
 		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qprogressbar.h \
 		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/QPushButton \
@@ -1670,6 +1667,8 @@ moc_mainwindow.cpp: ../fury-dps-sim/mainwindow.h \
 		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/QtWidgetsDepends \
 		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qabstractitemview.h \
 		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qaccessiblewidget.h \
+		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qaction.h \
+		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qactiongroup.h \
 		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qboxlayout.h \
 		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qlayout.h \
 		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qlayoutitem.h \
@@ -1728,6 +1727,8 @@ moc_mainwindow.cpp: ../fury-dps-sim/mainwindow.h \
 		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qlistwidget.h \
 		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qmdiarea.h \
 		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qmdisubwindow.h \
+		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qmenu.h \
+		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qmenubar.h \
 		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qmessagebox.h \
 		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qmouseeventtransition.h \
 		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qopenglwidget.h \
@@ -5073,11 +5074,6 @@ main.o: ../fury-dps-sim/main.cpp ../fury-dps-sim/mainwindow.h \
 		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qlabel.h \
 		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/QMainWindow \
 		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qmainwindow.h \
-		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/QMenuBar \
-		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qmenubar.h \
-		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qmenu.h \
-		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qaction.h \
-		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qactiongroup.h \
 		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/QProgressBar \
 		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qprogressbar.h \
 		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/QPushButton \
@@ -5096,6 +5092,8 @@ main.o: ../fury-dps-sim/main.cpp ../fury-dps-sim/mainwindow.h \
 		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/QtWidgetsDepends \
 		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qabstractitemview.h \
 		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qaccessiblewidget.h \
+		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qaction.h \
+		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qactiongroup.h \
 		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qboxlayout.h \
 		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qlayout.h \
 		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qlayoutitem.h \
@@ -5154,6 +5152,8 @@ main.o: ../fury-dps-sim/main.cpp ../fury-dps-sim/mainwindow.h \
 		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qlistwidget.h \
 		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qmdiarea.h \
 		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qmdisubwindow.h \
+		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qmenu.h \
+		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qmenubar.h \
 		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qmessagebox.h \
 		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qmouseeventtransition.h \
 		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qopenglwidget.h \
@@ -5569,11 +5569,6 @@ mainwindow.o: ../fury-dps-sim/mainwindow.cpp ../fury-dps-sim/mainwindow.h \
 		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qlabel.h \
 		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/QMainWindow \
 		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qmainwindow.h \
-		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/QMenuBar \
-		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qmenubar.h \
-		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qmenu.h \
-		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qaction.h \
-		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qactiongroup.h \
 		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/QProgressBar \
 		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qprogressbar.h \
 		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/QPushButton \
@@ -5592,6 +5587,8 @@ mainwindow.o: ../fury-dps-sim/mainwindow.cpp ../fury-dps-sim/mainwindow.h \
 		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/QtWidgetsDepends \
 		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qabstractitemview.h \
 		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qaccessiblewidget.h \
+		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qaction.h \
+		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qactiongroup.h \
 		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qboxlayout.h \
 		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qlayout.h \
 		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qlayoutitem.h \
@@ -5650,6 +5647,8 @@ mainwindow.o: ../fury-dps-sim/mainwindow.cpp ../fury-dps-sim/mainwindow.h \
 		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qlistwidget.h \
 		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qmdiarea.h \
 		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qmdisubwindow.h \
+		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qmenu.h \
+		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qmenubar.h \
 		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qmessagebox.h \
 		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qmouseeventtransition.h \
 		../../Qt/5.14.2/qt5_wasm_binaries/include/QtWidgets/qopenglwidget.h \
