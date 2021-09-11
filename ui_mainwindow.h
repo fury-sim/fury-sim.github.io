@@ -3153,7 +3153,7 @@ public:
         tab_3->setObjectName(QString::fromUtf8("tab_3"));
         groupBox_25 = new QGroupBox(tab_3);
         groupBox_25->setObjectName(QString::fromUtf8("groupBox_25"));
-        groupBox_25->setGeometry(QRect(30, 20, 251, 511));
+        groupBox_25->setGeometry(QRect(30, 20, 261, 511));
         checkBox_bom = new QCheckBox(groupBox_25);
         checkBox_bom->setObjectName(QString::fromUtf8("checkBox_bom"));
         checkBox_bom->setGeometry(QRect(17, 30, 141, 17));
@@ -3235,7 +3235,7 @@ public:
         checkBox_drums_of_war->setGeometry(QRect(17, 450, 141, 17));
         checkBox_braided_eternium_chain = new QCheckBox(groupBox_25);
         checkBox_braided_eternium_chain->setObjectName(QString::fromUtf8("checkBox_braided_eternium_chain"));
-        checkBox_braided_eternium_chain->setGeometry(QRect(20, 480, 221, 17));
+        checkBox_braided_eternium_chain->setGeometry(QRect(17, 480, 241, 17));
         groupBox_27 = new QGroupBox(tab_3);
         groupBox_27->setObjectName(QString::fromUtf8("groupBox_27"));
         groupBox_27->setGeometry(QRect(320, 20, 251, 361));
@@ -3275,7 +3275,7 @@ public:
         comboBox_weapon_enchantment->setGeometry(QRect(40, 230, 171, 22));
         groupBox_28 = new QGroupBox(tab_3);
         groupBox_28->setObjectName(QString::fromUtf8("groupBox_28"));
-        groupBox_28->setGeometry(QRect(610, 20, 241, 341));
+        groupBox_28->setGeometry(QRect(600, 20, 251, 341));
         checkBox_jocr = new QCheckBox(groupBox_28);
         checkBox_jocr->setObjectName(QString::fromUtf8("checkBox_jocr"));
         checkBox_jocr->setGeometry(QRect(15, 30, 181, 17));
