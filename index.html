@@ -68,7 +68,7 @@
       }
     </style>
   </head>
-  <body onload="init()">
+  <body>
     <figure id="appspinner">
       <center>
         <img src="tbcsim-icon.png" alt="TBCSim">
@@ -80,6 +80,8 @@
     <div id="screen"></div>
 
     <script src="coi-serviceworker.js"></script>
+    <script src="TBCSim.js"></script>
+    <script src="qtloader.js"></script>
     <script type="text/javascript">
         async function init()
         {
@@ -119,8 +121,8 @@
                 console.error(e.stack);
             }
         }
+
+        window.addEventListener('load', init);
     </script>
-    <script src="TBCSim.js"></script>
-    <script type="text/javascript" src="qtloader.js"></script>
   </body>
 </html>
