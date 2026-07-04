@@ -3,64 +3,124 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta http-equiv="origin-trial" content="AsxA2rYJ5Gv34juzKEciTR2bOC1ycg59JJ898AseuI2qD/m42ZzuJVgL+zcPDl+SXFc45Ap/123jpFSdAj2DhwAAAAB8eyJvcmlnaW4iOiJodHRwczovL2Z1cnktc2ltLmdpdGh1Yi5pbzo0NDMiLCJmZWF0dXJlIjoiVW5yZXN0cmljdGVkU2hhcmVkQXJyYXlCdWZmZXIiLCJleHBpcnkiOjE2NTg4Nzk5OTksImlzU3ViZG9tYWluIjp0cnVlfQ==">
-    <title>Fury DPS Sim</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>TBC Fury DPS Simulator</title>
+    <link rel="icon" type="image/png" href="tbcsim-icon.png">
     <style>
-      html, body { padding: 0; margin : 0; overflow:hidden; height: 100% }
-      /* the canvas *must not* have any border or padding, or mouse coords will be wrong */
-      canvas { border: 0px none; background-color: white; height:100%; width:100%;  }
-      /* The contenteditable property is set to true for the canvas in order to support
-         clipboard events. Hide the resulting focus frame and set the cursor back to
-         the default cursor. */
-      canvas { outline: 0px solid transparent; caret-color: transparent; cursor:default }
+      :root {
+        color-scheme: dark;
+        background: #07101f;
+      }
+
+      html,
+      body {
+        min-width: 950px;
+        min-height: 865px;
+        margin: 0;
+        padding: 0;
+        overflow: auto;
+        background: #07101f;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+      }
+
+      #screen {
+        width: 950px;
+        height: 865px;
+        flex: 0 0 auto;
+      }
+
+      #appspinner {
+        width: 950px;
+        min-height: 865px;
+        margin: 0;
+        overflow: visible;
+        color: #d8e6f3;
+        font-family: sans-serif;
+      }
+
+      #appspinner center {
+        margin-top: 3em;
+        line-height: 150%;
+      }
+
+      #appspinner img {
+        display: block;
+        width: 160px;
+        height: 160px;
+        margin: 0 auto 18px;
+      }
+
+      #appspinner strong {
+        display: block;
+        color: #ffd341;
+        font-size: 22px;
+      }
+
+      #appstatus {
+        margin-top: 8px;
+        color: #9fb7d0;
+      }
     </style>
   </head>
   <body onload="init()">
-    <figure style="overflow:visible;" id="qtspinner">
-      <center style="margin-top:1.5em; line-height:150%">
-        <img src="qtlogo.svg" width="320" height="200" style="display:block"></img>
-        <strong>Fury DPS Sim for 2.4.3</strong>
-        <div id="qtstatus"></div>
+    <figure id="appspinner">
+      <center>
+        <img src="tbcsim-icon.png" alt="TBCSim">
+        <strong>TBCSim</strong>
+        <div id="appstatus"></div>
         <noscript>JavaScript is disabled. Please enable JavaScript to use this application.</noscript>
       </center>
     </figure>
-    <canvas id="qtcanvas" oncontextmenu="event.preventDefault()" contenteditable="true"></canvas>
+    <div id="screen"></div>
 
-    <script type='text/javascript'>
-        function init() {
-          var spinner = document.querySelector('#qtspinner');
-          var canvas = document.querySelector('#qtcanvas');
-          var status = document.querySelector('#qtstatus')
+    <script src="coi-serviceworker.js"></script>
+    <script type="text/javascript">
+        async function init()
+        {
+            const spinner = document.querySelector('#appspinner');
+            const screen = document.querySelector('#screen');
+            const status = document.querySelector('#appstatus');
 
-          var qtLoader = QtLoader({
-              canvasElements : [canvas],
-              showLoader: function(loaderStatus) {
-                  spinner.style.display = 'block';
-                  canvas.style.display = 'none';
-                  status.innerHTML = "Preparing the target dummies...";
-              },
-              showError: function(errorText) {
-                  status.innerHTML = errorText;
-                  spinner.style.display = 'block';
-                  canvas.style.display = 'none';
-              },
-              showExit: function() {
-                  status.innerHTML = "Application exit";
-                  if (qtLoader.exitCode !== undefined)
-                      status.innerHTML += " with code " + qtLoader.exitCode;
-                  if (qtLoader.exitText !== undefined)
-                      status.innerHTML += " (" + qtLoader.exitText + ")";
-                  spinner.style.display = 'block';
-                  canvas.style.display = 'none';
-              },
-              showCanvas: function() {
-                  spinner.style.display = 'none';
-                  canvas.style.display = 'block';
-              },
-          });
-          qtLoader.loadEmscriptenModule("dps_simulation_qt");
-      }
+            const showUi = (ui) => {
+                [spinner, screen].forEach(element => element.style.display = 'none');
+                if (screen === ui)
+                    screen.style.position = 'default';
+                ui.style.display = 'block';
+            }
+
+            try {
+                showUi(spinner);
+                status.innerHTML = 'Loading simulator...';
+
+                const instance = await qtLoad({
+                    qt: {
+                        onLoaded: () => showUi(screen),
+                        onExit: exitData =>
+                        {
+                            status.innerHTML = 'Application exit';
+                            status.innerHTML +=
+                                exitData.code !== undefined ? ` with code ${exitData.code}` : '';
+                            status.innerHTML +=
+                                exitData.text !== undefined ? ` (${exitData.text})` : '';
+                            showUi(spinner);
+                        },
+                        entryFunction: window.createQtAppInstance,
+                        containerElements: [screen],
+                    }
+                });
+            } catch (e) {
+                console.error(e);
+                console.error(e.stack);
+            }
+        }
     </script>
+    <script src="TBCSim.js"></script>
     <script type="text/javascript" src="qtloader.js"></script>
   </body>
 </html>
