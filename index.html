@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>TBC Simulator</title>
+    <title>TBC Fury DPS Simulator</title>
     <link rel="icon" type="image/png" href="tbcsim-icon.png">
     <style>
       :root {
@@ -66,6 +66,16 @@
         margin-top: 8px;
         color: #9fb7d0;
       }
+
+      #appstatus button {
+        margin-top: 12px;
+        padding: 8px 14px;
+        border: 1px solid #d9a928;
+        background: #142944;
+        color: #ffd341;
+        cursor: pointer;
+        font: inherit;
+      }
     </style>
   </head>
   <body>
@@ -96,6 +106,14 @@
                 ui.style.display = 'block';
             }
 
+            const sharedArrayBufferMessage = 'SharedArrayBuffer is not defined';
+            const showReloadNotice = () => {
+                status.innerHTML =
+                    'The simulator needs one more reload before WebAssembly threads are ready.<br>' +
+                    '<button type="button" onclick="window.location.reload()">Reload simulator</button>';
+                showUi(spinner);
+            };
+
             try {
                 showUi(spinner);
                 status.innerHTML = 'Loading simulator...';
@@ -105,6 +123,11 @@
                         onLoaded: () => showUi(screen),
                         onExit: exitData =>
                         {
+                            if (exitData.text !== undefined && exitData.text.includes(sharedArrayBufferMessage)) {
+                                showReloadNotice();
+                                return;
+                            }
+
                             status.innerHTML = 'Application exit';
                             status.innerHTML +=
                                 exitData.code !== undefined ? ` with code ${exitData.code}` : '';
@@ -119,6 +142,9 @@
             } catch (e) {
                 console.error(e);
                 console.error(e.stack);
+                if (String(e).includes(sharedArrayBufferMessage)) {
+                    showReloadNotice();
+                }
             }
         }
 
